@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh sách môn học</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5; /* Màu nền nhẹ */
+            color: #333; 
+            line-height: 1.6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 30px 50px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 600px;
+            border: 1px solid #e1e5eb;
+        }
+
+        h1 {
+            color: #1a73e8; 
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 25px;
+        }
+
+        
+        ol.main-list {
+            counter-reset: item;
+            padding-left: 20px;
+            font-weight: bold; 
+        }
+
+        ol.main-list > li {
+            display: block;
+            margin-bottom: 15px;
+        }
+
+        ol.main-list > li::before {
+            content: counter(item) ". ";
+            counter-increment: item;
+            font-weight: bold;
+        }
+
+    
+        ol.sub-list {
+            counter-reset: subitem;
+            padding-left: 30px;
+            margin-top: 10px;
+            font-weight: normal; 
+        }
+
+        ol.sub-list > li {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        ol.sub-list > li::before {
+            content: counter(subitem) ". ";
+            counter-increment: subitem;
+        }
+        .back-home-btn {
+            display: inline-block;
+            text-decoration: none;
+            color: #64748b;
+            font-weight: 500;
+            margin-bottom: 15px;
+            transition: color 0.2s ease;
+            font-size: 0.95rem;
+        }
+        .back-home-btn:hover {
+            color: #2563eb;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <a href="index.html" class="back-home-btn">← Quay lại Trang chủ</a>
+        <h1>Danh sách môn học (mẫu)</h1>
+    
+        <ol class="main-list"
+            <li>
+                Công nghệ thông tin
+                <ol class="sub-list">
+                    <li>Lập trình</li>
+                    <li>Thiết kế web</li>
+                    <li>Mạng máy tính</li>
+                </ol>
+            </li>
+            <li>
+                Kinh tế
+                <ol class="sub-list">
+                    <li>Marketing</li>
+                    <li>Quản trị doanh nghiệp</li>
+                </ol>
+            </li>
+            <li>
+                Ngôn ngữ
+                <ol class="sub-list">
+                    <li>Tiếng Anh</li>
+                    <li>Tiếng Nhật</li>
+                </ol>
+            </li>
+        </ol>
+    </div>
+    <script src="js/anti-devtools.js"></script>
+
+</body>
+</html>

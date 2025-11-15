@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang chủ</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            color: #333;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 30px 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            width: 100%;
+            max-width: 800px;
+            border: 1px solid #e1e5eb;
+        }
+
+        h1 {
+            color: #2563eb;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .link-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+            gap: 20px;
+        }
+
+        .link-item {
+            display: block;
+            padding: 20px;
+            background-color: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 10px;
+            text-decoration: none;
+            color: #334155;
+            transition: all 0.2s ease;
+        }
+
+        .link-item:hover {
+            background-color: #eff6ff;
+            border-color: #bfdbfe;
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.1);
+            color: #1e40af;
+        }
+
+        .link-title {
+            font-weight: bold;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        .link-desc {
+            font-size: 0.9rem;
+            color: #64748b;
+        }
+        @media (max-width: 768px) {
+            .christmas-tree {
+                width: 150px; /* Nhỏ hơn trên mobile, ví dụ 150px */
+                left: 10px;
+                right: 10px;
+            }
+            /* ... */
+        }
+        /* Hiệu ứng hoa rơi */
+        .sakura {
+            position: fixed;
+            top: -10px;
+            z-index: 9999; /* Đảm bảo hoa luôn rơi trên cùng */
+            user-select: none;
+            pointer-events: none; /* Để không ảnh hưởng khi click vào nút */
+            animation-name: fall, sway;
+            animation-timing-function: linear, ease-in-out;
+            animation-iteration-count: infinite, infinite;
+            color: #ffc0cb; /* Màu hồng phấn của hoa anh đào */
+            font-size: 20px; /* Kích thước cánh hoa */
+        }
+
+        @keyframes fall {
+            0% { top: -10px; }
+            100% { top: 100vh; } /* Rơi xuống đáy màn hình */
+        }
+
+        @keyframes sway {
+            0% { transform: translateX(0px) rotate(0deg); }
+            50% { transform: translateX(50px) rotate(180deg); } /* Lắc lư sang phải */
+            100% { transform: translateX(0px) rotate(360deg); } /* Lắc lư về vị trí cũ */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Trang chủ</h1>
+
+        <div class="link-grid">
+            <a href="CV.html" class="link-item">
+                <span class="link-title">Câu 1 – CV / Portfolio</span>
+                <span class="link-desc">Giới thiệu bản thân</span>
+            </a>
+
+            <a href="MonHoc.html" class="link-item">
+                <span class="link-title">Câu 2 – Danh sách môn học</span>
+                <span class="link-desc">Sử dụng thẻ ol/ul</span>
+            </a>
+
+            <a href="HinhVaChuThich.html" class="link-item">
+                <span class="link-title">Câu 3 – Hình & chú thích</span>
+                <span class="link-desc">Sử dụng thẻ figure/figcaption</span>
+            </a>
+
+            <a href="LienKet_MXH.html" class="link-item">
+                <span class="link-title">Câu 4 – Mạng xã hội</span>
+                <span class="link-desc">Liên kết đến các trang MXH</span>
+            </a>
+
+            <a href="LienHe.html" class="link-item">
+                <span class="link-title">Câu 5 – Liên hệ</span>
+                <span class="link-desc">Thông tin liên lạc & bản đồ</span>
+            </a>
+        </div>
+    </div>
+    <script>
+        function createSakura() {
+            const sakura = document.createElement('div');
+            sakura.innerHTML = '❄️'; // Bạn có thể thay bằng ký tự '🌸❄️' nếu muốn tuyết rơi
+            sakura.className = 'sakura';
+            
+            // Vị trí xuất hiện ngẫu nhiên theo chiều ngang
+            sakura.style.left = Math.random() * 100 + 'vw';
+            
+            // Kích thước ngẫu nhiên
+            sakura.style.fontSize = (Math.random() * 15 + 10) + 'px';
+            
+            // Thời gian rơi và lắc lư ngẫu nhiên để tự nhiên hơn
+            const fallDuration = Math.random() * 5 + 5 + 's'; // Từ 5s đến 10s
+            const swayDuration = Math.random() * 3 + 2 + 's'; // Từ 2s đến 5s
+            sakura.style.animationDuration = fallDuration + ', ' + swayDuration;
+    
+            document.body.appendChild(sakura);
+    
+            // Xóa cánh hoa sau khi rơi xong để tránh nặng máy
+            setTimeout(() => {
+                sakura.remove();
+            }, parseFloat(fallDuration) * 1000);
+        }
+    
+        // Tạo cánh hoa mới mỗi 300ms
+        setInterval(createSakura, 300);
+    </script>
+    <script src="js/anti-devtools.js"></script>
+    
+
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liên kết mạng xã hội</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            color: #333;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 30px 40px;
+            border-radius: 20px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+            width: 100%;
+            max-width: 450px; 
+            border: 1px solid #eef2f6;
+        }
+
+        h1 {
+            color: #2563eb;
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 30px;
+        }
+
+        .social-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px; 
+        }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            text-decoration: none; 
+            background-color: #f8fafc; 
+            padding: 15px 20px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+            transition: all 0.2s ease; 
+            color: #1e293b;
+            font-weight: 500;
+        }
+
+        .social-link:hover {
+            background-color: #eff6ff; 
+            border-color: #bfdbfe;
+            transform: translateY(-2px); /* Nổi nhẹ lên */
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.1);
+        }
+
+        .social-link img {
+            width: 32px;
+            height: 32px;
+            margin-right: 15px;
+            object-fit: contain;
+        }
+
+        .fb { color: #1877f2; }
+        .yt { color: #ff0000; }
+        .insta { color: #c32aa3; }
+        .tt { color: #000000; }
+        .back-home-btn {
+            display: inline-block;
+            text-decoration: none;
+            color: #64748b;
+            font-weight: 500;
+            margin-bottom: 15px;
+            transition: color 0.2s ease;
+            font-size: 0.95rem;
+        }
+        .back-home-btn:hover {
+            color: #2563eb;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <a href="index.html" class="back-home-btn">← Quay lại Trang chủ</a>
+        <h1>Liên kết mạng xã hội</h1>
+    
+        <div class="social-list">
+            <a href="https://www.facebook.com" target="_blank" class="social-link">
+                <img src="images/facebook.svg" alt="Facebook Icon">
+                <span class="fb">Facebook</span>
+            </a>
+
+            <a href="https://www.youtube.com" target="_blank" class="social-link">
+                <img src="images/youtube.svg" alt="YouTube Icon">
+                <span class="yt">YouTube</span>
+            </a>
+
+            <a href="https://www.instagram.com" target="_blank" class="social-link">
+                <img src="images/instagram.svg" alt="Instagram Icon">
+                <span class="insta">Instagram</span>
+            </a>
+
+            <a href="https://www.tiktok.com" target="_blank" class="social-link">
+                <img src="images/tiktok.svg" alt="TikTok Icon">
+                <span class="tt">TikTok</span>
+            </a>
+        </div>
+    </div>
+    <script src="js/anti-devtools.js"></script>
+
+</body>
+</html>

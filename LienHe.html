@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Liên hệ</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            color: #333;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            width: 100%;
+            max-width: 800px;
+            border: 1px solid #e1e5eb;
+        }
+
+        h1 {
+            color: #2563eb;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .contact-layout {
+            display: flex;
+            gap: 30px; 
+        }
+
+        .map-column {
+            flex: 1; 
+            background-color: #dbeafe; 
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 250px; 
+            overflow: hidden; 
+        }
+
+        .map-column img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; 
+        }
+
+        .info-column {
+            flex: 1; 
+            background-color: #f8fafc;
+            padding: 25px;
+            border-radius: 10px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .info-column h2 {
+            color: #1e40af;
+            font-size: 1.2rem;
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+
+        .contact-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .contact-table td {
+            padding: 12px 0;
+            border-bottom: 1px solid #e2e8f0; /* Đường kẻ mờ giữa các hàng */
+            font-size: 0.95rem;
+        }
+
+        .contact-table tr:last-child td {
+            border-bottom: none; 
+        }
+
+        .label {
+            font-weight: bold;
+            width: 100px; 
+            color: #475569;
+        }
+
+        .value {
+            color: #1e293b;
+        }
+
+        @media (max-width: 768px) {
+            .contact-layout {
+                flex-direction: column; 
+            }
+            .map-column {
+                min-height: 200px;
+            }
+        }
+        .back-home-btn {
+            display: inline-block;
+            text-decoration: none;
+            color: #64748b;
+            font-weight: 500;
+            margin-bottom: 15px;
+            transition: color 0.2s ease;
+            font-size: 0.95rem;
+        }
+        .back-home-btn:hover {
+            color: #2563eb;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <a href="index.html" class="back-home-btn">← Quay lại Trang chủ</a>
+
+        <h1>Liên hệ</h1>
+
+        <div class="contact-layout">
+            <div class="map-column">
+                <img src="images/map.svg" alt="Bản đồ vị trí">
+            </div>
+
+            <div class="info-column">
+                <h2>Thông tin liên hệ</h2>
+                <table class="contact-table">
+                    <tr>
+                        <td class="label">Email:</td>
+                        <td class="value">2505ct0048@dhv.edu.vn</td>
+                    </tr>
+                    <tr>
+                        <td class="label">Điện thoại:</td>
+                        <td class="value">0924.130.629</td>
+                    </tr>
+                    <tr>
+                        <td class="label">Địa chỉ:</td>
+                        <td class="value">Vĩnh Lộc A, Quách Điêu, Bình Chánh, TP.HCM</td>
+                    </tr>
+                    <tr>
+                        <td class="label">Website:</td>
+                        <td class="value"><a href="https://lethinhdat.github.io/website" target="_blank" style="color: #2563eb; text-decoration: none;">lethinhdat.github.io/website</a></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="js/anti-devtools.js"></script>
+</body>
+</html>
